@@ -2,6 +2,7 @@
 #include "base/trace.hh"
 #include "debug/MemController.hh"
 
+
 AbstractMemoryController::AbstractMemoryController(const AbstractMemoryControllerParams* p)
     : MemObject(p),
       last_update(0),
@@ -28,6 +29,7 @@ AbstractMemoryController::recordRequest(PacketPtr pkt) {
 void
 AbstractMemoryController::updateBufferAllocation() {
     // Write history to file
+    // Add logs for garnet mesh 
     std::ofstream history_file("request_history.txt");
     for (const auto& entry : request_history) {
         history_file << entry.cpu_id << "," << entry.timestamp << "\n";

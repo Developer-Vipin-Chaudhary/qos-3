@@ -4,6 +4,7 @@
 #include "mem/mem_object.hh"
 #include "params/AbstractMemoryController.hh"
 
+//  Declatre QOS 
 class AbstractMemoryController : public MemObject {
 private:
     struct RequestHistory {

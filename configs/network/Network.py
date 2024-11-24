@@ -284,6 +284,7 @@ def init_network(options, network, InterfaceClass):
         network.fault_model = FaultModel()
 
 
+## Garnet network 
 class GarnetNetwork(BaseGarnetNetwork):
     def __init__(self, ruby_system):
         super().__init__(ruby_system)

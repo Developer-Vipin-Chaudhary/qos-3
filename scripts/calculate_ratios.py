@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 
-
+## get output 
 def calculate_buffer_ratios():
     # Read request history
     df = pd.read_csv("request_history.txt", names=["cpu_id", "timestamp"])
@@ -31,3 +31,10 @@ def calculate_buffer_ratios():
 
 if __name__ == "__main__":
     calculate_buffer_ratios()
+
+
+# Example out put 
+# cpu_id,buffersize,duration,time_period
+# 0,4,100000000,100000000
+# 1,6,100000000,100000000
+# ...
